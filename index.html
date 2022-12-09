@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Any Text Share</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Any Text Share</h1>
+    <h2>Share your text with anyone</h2>
+    <!-- Use id and password to save the text -->
+    <div class="container">
+    <input type="password" name="password" placeholder="Password" id="password" required>
+    <textarea name="text" cols="30" rows="10" placeholder="Text" id="text" required></textarea>
+    <button type="submit" value="Save" onclick="saveText()">Save</button>
+
+    </div>
+    <!-- Add message text area -->
+    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" readonly></textarea>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase.js"></script>
+<script src="script.js"></script>
+</html>
