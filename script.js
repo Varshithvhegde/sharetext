@@ -14,7 +14,7 @@ firebase.initializeApp(firebaseConfig);
 var messagesRef = firebase.database().ref('messages');
  var unique;
 
-document.getElementById("message").style.display = "none";
+document.getElementById("container2").style.display = "none";
 
  var url_string = window.location.href;
  var url = new URL(url_string);
@@ -24,7 +24,7 @@ document.getElementById("message").style.display = "none";
     // Make the form invisible
     document.getElementById("container").style.display = "none";
     // Make the message visible
-    document.getElementById("message").style.display = "block";
+    document.getElementById("container2").style.display = "block";
     // take the password from the user
     var password = prompt("Please enter the password", "");
     // Check if the password is correct
