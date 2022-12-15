@@ -15,8 +15,8 @@
     <h2>Share your text with anyone</h2></div>
     <!-- Use id and password to save the text -->
     <div class="container" id="container">
-    <input type="password" name="password" placeholder="Password" id="password" required>
-    <textarea name="text" cols="30" rows="10" placeholder="Text" id="text" required></textarea>
+    <input type="password" name="password" placeholder="Enter a password (Remember It)" id="password" required>
+    <textarea name="text" cols="30" rows="10" placeholder="Enter the text that you want to save" id="text" required></textarea>
     <button type="submit" value="Save" onclick="saveText()">Save</button>
     <!-- Show the link to share -->
     <p id="link"></p>
@@ -24,7 +24,7 @@
     </div>
     <!-- Add message text area -->
     <div class="container" id="container2">
-    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message">Loading....................</textarea>
     <button type="submit" value="Save" onclick="savechanges()" id="savechanges">Save</button>
     </div>
 </body>
