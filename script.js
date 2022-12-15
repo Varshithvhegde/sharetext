@@ -25,19 +25,23 @@ document.getElementById("container2").style.display = "none";
     document.getElementById("container").style.display = "none";
     // Make the message visible
     document.getElementById("container2").style.display = "block";
+
     // take the password from the user
     var password = prompt("Please enter the password", "");
     // Check if the password is correct
 
 
     var ref = firebase.database().ref("messages");
+    
     ref.on("value", function(snapshot) {
         snapshot.forEach(function(childSnapshot) {
         var childData = childSnapshot.val();
+        
         if(childData.number == unique){
             if (childData.number == unique){
                 if(childData.password == password){
                     // Display the message
+                    document.getElementById("create").style.display = "block";
                     document.getElementById("message").innerHTML = childData.text;
                 }
                 else{
@@ -55,6 +59,8 @@ document.getElementById("container2").style.display = "none";
 
  }
 
+// Make create button invisible
+document.getElementById("create").style.display = "none";
 function saveMessage(password, text){
     var newMessageRef = messagesRef.push();
     unique=createUniquenumber();
@@ -82,6 +88,12 @@ function saveMessage(password, text){
 function saveText(){
   var password = document.getElementById('password').value;
     var text = document.getElementById('text').value;
+    // Validate and check if password is not empty  and has minimum 3 characters
+    if(password.length < 3){
+        alert("Password must be at least 3 characters");
+        return false;
+    }
+    // Save the message
     saveMessage(password, text);
 }
 
@@ -139,6 +151,16 @@ function savechanges(){
         });
     }
     );
+}
+
+function createNew(){
+    // Make the form visible
+    document.getElementById("container").style.display = "block";
+    // Make the message invisible
+    document.getElementById("container2").style.display = "none";
+    document.getElementById("create").style.display = "none";
+    window.history.pushState({}, document.title, "/" + "index.html" );
+
 }
 
 
