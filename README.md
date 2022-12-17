@@ -1,4 +1,4 @@
-# sharetext
+<h1 align="center" style="font-size:50px;"><a href="https://sharetext.vercel.app">Share Text</a></h1>
 
 A simple text sharing service. It is a simple web application that allows you to share text snippets with other people. It is written in JavaScript and uses Firebase as a backend.
 
