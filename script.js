@@ -116,6 +116,8 @@ function createUniquenumber(){
 
 function share(){
     // Share the link
+
+
     navigator.share({
         title: 'Secret message',
         text: 'Secret message',
@@ -161,6 +163,18 @@ function createNew(){
     document.getElementById("create").style.display = "none";
     window.history.pushState({}, document.title, "/" + "index.html" );
 
+}
+
+function shareshare(){
+    // get url and share it
+    var url_string = window.location.href;
+    navigator.share({
+        title: 'Secret message',
+        text: 'Secret message',
+        url: url_string,
+      })
+      .then(() => console.log('Successful share'))
+      .catch((error) => console.log('Error sharing', error));
 }
 
 
