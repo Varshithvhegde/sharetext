@@ -32,6 +32,9 @@ A simple text sharing service. It is a simple web application that allows you to
 * And you can also save the text snippet in the text field
 * You will also get a share button below the text field
 
+![frame_generic_dark (15)](https://user-images.githubusercontent.com/80502833/208247825-b9e6d917-ab73-4238-853f-9b4540088d3c.png)
+
+
 ## Code Review
 
 * Code to save the text snippet
